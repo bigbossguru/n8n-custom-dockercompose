@@ -1,0 +1,17 @@
+services:
+  n8n:
+    build: .
+    container_name: n8n
+    restart: always
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - C:\Users\user\Dev\n8n_files:/home/node/files
+    ports:
+      - 5678:5678
+    environment:
+      - N8N_SECURE_COOKIE=false
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_RUNNERS_ENABLED=true
+
+volumes:
+  n8n_data: {}
