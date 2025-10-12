@@ -6,7 +6,7 @@ services:
     volumes:
       - n8n_data:/home/node/.n8n
       # - C:\Users\user\Dev\n8n_files:/home/node/files FOR WINDOWS
-      - ~/n8n_files:/home/node/files
+      - /n8n_files:/home/node/files
     ports:
       - 5678:5678
     environment:
