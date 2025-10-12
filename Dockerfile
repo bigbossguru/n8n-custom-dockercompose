@@ -26,7 +26,9 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN pip install --no-cache-dir \
     numpy \
     pandas \
-    openpyxl
+    openpyxl \
+    pikepdf \
+    PyPDF2
 
 # Switch back to node user
 USER node
