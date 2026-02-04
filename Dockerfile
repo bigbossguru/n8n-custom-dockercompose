@@ -1,32 +1,19 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:alpine
 
 # Switch to root to install packages
 USER root
 
 # Install Python and required build tools
-# RUN apk add --no-cache \
-#     python3 \
-#     py3-pip \
-#     build-base \
-#     python3-dev \
-#     libffi-dev \
-#     openssl-dev \
-#     musl-dev \
-#     g++ \
-#     pkgconfig
-
-# Install Python and required build tools (Debian)
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     python3 \
-    python3-pip \
-    python3-venv \
+    py3-pip \
     python3-dev \
-    build-essential \
+    build-base \
     libffi-dev \
-    libssl-dev \
-    pkg-config \
-    g++ \
-    && rm -rf /var/lib/apt/lists/*
+    openssl-dev \
+    musl-dev \
+    pkgconfig \
+    g++
 
 
 # Upgrade pip and create venv
