@@ -12,7 +12,8 @@ services:
     environment:
       # - N8N_SECURE_COOKIE=false
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
-      # - N8N_RUNNERS_ENABLED=true
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_RUNNERS_MODE=external
       # - N8N_HOST=dockernode1localhost.internal.com
       - WEBHOOK_URL=${N8N_WEBHOOK_URL} #http://dockernode1localhost.internal.com:5678
       - N8N_PROXY_HOPS=1
