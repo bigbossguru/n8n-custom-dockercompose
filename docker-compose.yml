@@ -15,6 +15,7 @@ services:
       - N8N_RUNNERS_ENABLED=true
       # - N8N_HOST=dockernode1localhost.internal.com
       - WEBHOOK_URL=${N8N_WEBHOOK_URL} #http://dockernode1localhost.internal.com:5678
+      - N8N_PROXY_HOPS=1
 
 volumes:
   n8n_data: {}
